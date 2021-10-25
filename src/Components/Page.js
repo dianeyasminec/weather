@@ -1,25 +1,16 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 
 //2nd client side 
-function Page(){
-    const[houston,setHouston,]= useState("Houston")
-    useEffect(()=> {
-        const APIKEY = '1dc17c4f6cb7425a7f108ce2e2652ee4'
-        const name = 'city'
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${APIKEY}`
-      )
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .then(data => {console.log(data)})
-      }, [houston]) 
-
-      //Use .filter to get houston weather info 
-    
+function Page(props){
+    console.log("props",props)
+    const {data}= props
 
 
     return(
         <div>
-            Welcome to page
+          <span>{data.name},{data.sys.country}.Weather</span>
+          {/* <h1>{data.main.temp}</h1> */}
+           
         </div>
     )}
   
