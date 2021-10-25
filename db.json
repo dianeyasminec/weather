@@ -1,0 +1,36 @@
+{
+  "favoritecities": [
+    {
+      "id": 1,
+      "title": "New York"
+    },
+    {
+      "id": 2,
+      "title": "Houston"
+    },
+    {
+      "id": 3,
+      "title": "Los Angeles"
+    },
+    {
+      "id": 4,
+      "title": "Austin"
+    },
+    {
+      "id": 5,
+      "title": "Houston"
+    },
+    {
+      "id": 6,
+      "title": "Chicago"
+    },
+    {
+      "id": 7,
+      "title": "Chicago"
+    },
+    {
+      "id": 8,
+      "title": "New York"
+    }
+  ]
+}

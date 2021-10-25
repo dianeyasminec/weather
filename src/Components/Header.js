@@ -7,9 +7,6 @@ function Header() {
       <NavLink exact activeClassName="active" to="/">
         Home
       </NavLink>
-      <NavLink activeClassName="active" to="/Page">
-        Page
-      </NavLink>
       <NavLink activeClassName="active" to="/Weather">
         Weather
       </NavLink>
