@@ -1,6 +1,5 @@
 import React ,{ useState }from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
-import ReactDOM from "react-dom";
+
 //route client 3 
 //add and saved favorites city 
 

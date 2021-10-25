@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch,Route} from 'react-router-dom'
 import Home from '../Components/Home'
 import Page from '../Components/Page'
@@ -26,7 +26,6 @@ function App() {
       <Route path="/FavoritesCityLists" component={FavoritesCityLists}>
         <FavoritesCityLists />
       </Route>
-      {/* {move to render the first route that matches} */}
       <Route exact path="/">
         <Home />
       </Route>

@@ -1,36 +1,38 @@
 import React,{useState,useEffect} from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
-import ReactDOM from "react-dom";
+import { useParams } from "react-router-dom";
+
+
 function Weather(){
-    const [location,setLocation]= useState({
-        city:""
-    })
+    const [location,setLocation]= useState([])
+    // const { city } = useParams();
 
-    function handleOnChange(event){
-        let name=event.target.name
-        let value=event.target.value
-        if(name=== "city")
-        setLocation({...location,city:value})
+function handleOnChange(event){
+    let value=event.target.value
+       setLocation({...location,city:value})
     }
-    useEffect(()=> {
+   
+        
+function handleSubmit(event) {
+    event.preventDefault();
+   
+}
+ 
+useEffect(() => {
         const APIKEY = '1dc17c4f6cb7425a7f108ce2e2652ee4'
-        const name = 'city'
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${APIKEY}`
+        console.log("CALIING WEATHER API")
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location.city}&appid=${APIKEY}`
       )
-      .then(response => response.json())
-      .then(response => console.log(response))
-      //.then(data => setLocation(data.location))
-      //Change every time location is change(state)
-      }, [location])
-
-      function handleSubmit(event) {
-          event.preventDefault()
-      }
+     .then(response => response.json())
+     .then(data => {console.log(data)}
+    // .then(data => setLocation(data.weather))
+     //Change every time location is change(state)
+      })
+    
     return(
         <div>
             <form onSubmit={handleSubmit}>
-            <input type="text" name="city"placeholder="Enter city" onChange={ e=>handleOnChange(e)}></input>
-            <button className="btn btn-primary" onSubmit={handleSubmit}>SUBMIT</button>
+            <input type="text" id="location" value={location.city} name="city"placeholder="Enter citys" onChange={ e=>handleOnChange(e)}></input>
+            <button className="btn btn-primary" onClick={handleSubmit}>SUBMIT</button>
             </form>
         </div>
     )}

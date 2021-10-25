@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
-import ReactDOM from "react-dom";
+
 //2nd client side 
 function Page(){
     const[houston,setHouston,]= useState("Houston")
