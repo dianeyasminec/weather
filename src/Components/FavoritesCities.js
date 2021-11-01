@@ -42,14 +42,14 @@ function FavoritesCities(){
                .then ((data) => {
                    console.log(data)
                    //let rep={...data}
-                   console.log("DATA FROM FETCH:"+JSON.stringify(data))
+                  //  console.log("DATA FROM FETCH:"+JSON.stringify(data))
                    setCities(cities=>[...cities,data] )
                  
                })       
          
               
            },[setCities])
-           console.log("CHECKING CITIES:"+JSON.stringify(cities))
+          //  console.log("CHECKING CITIES:"+JSON.stringify(cities))
            if(cities[0]!==undefined){
                fav_cities=cities[0].map((city) => {
               return <tr  key={city.id}><td>{city.title}</td> </tr>
