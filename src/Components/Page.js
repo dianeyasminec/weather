@@ -62,7 +62,7 @@ function Page(props){
             </table>
           </div>
           <br/>  <br/>
-          <button onClick={event=>window.location.href='/FavoritesCityLists'}>Save  favorites Cities</button>
+         
         </div>
     )}
   

@@ -39,17 +39,17 @@ function handleSubmit(event) {
             </form>
 
             {
-                weather.data != undefined?
+                weather.data !== undefined?
             
             <div>
             <Page data = {weather.data}/>
-            <a  >Add {location.city} city to favorites</a>
+           
             
             </div>
             :null
             }
 <br/>  <br/>
-<button onClick={event=>window.location.href='/FavoritesCityLists'}>Go to favorite cities</ button>
+<button onClick={event=>window.location.href='/favoritesCities'}>Go to favorite cities</ button>
         </div>
     )}
   

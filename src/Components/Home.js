@@ -10,7 +10,7 @@ function Home(){
       </header>
       <span>Let's get started!</span> 
       <br/>  <br/> <br/>
-      <button onClick={event=>window.location.href='/Weather'}>Search for Cities</button>
+      <button onClick={event=>window.location.href='/weather'}>Search for Cities</button>
       
         </div>
     ))

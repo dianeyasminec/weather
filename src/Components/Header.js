@@ -4,15 +4,10 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <nav>
-      <NavLink exact activeClassName="active" to="/">
-        Home
-      </NavLink>
-      <NavLink activeClassName="active" to="/Weather">
-        Weather
-      </NavLink>
-      <NavLink activeClassName="active" to="/FavoritesCityLists">
-      FavoritesCityLists
-      </NavLink>
+      <NavLink exact activeClassName="active" to="/"/>
+      <NavLink activeClassName="active" to="/weather"/>
+      <NavLink activeClassName="active" to="/favoritesCities"/>
+      
       </nav>
   )}
 
