@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Header() {
+function Navigation() {
   return (
     <nav>
       <NavLink exact activeClassName="active" to="/"/>
@@ -11,4 +11,4 @@ function Header() {
       </nav>
   )}
 
-  export default Header;
+  export default Navigation;

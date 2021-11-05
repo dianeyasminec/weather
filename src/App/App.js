@@ -4,7 +4,7 @@ import Home from '../Components/Home'
 import FavoritesCities from '../Components/FavoritesCities'
 import Weather from '../Components/Weather'
 // import ReactDOM from "react-dom";
-import Header from "../Components/Header";
+import Navigation from "../Components/Navigation";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Switch>
        <div className="App">
-         <Header/>
+         <Navigation/>
          <hr/>
          <Route exact path="/" component={Home}/>
        <Route exact path="/weather" component={Weather}/>

@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import Page from './Page'
+import {NavLink} from 'react-router-dom'
 
 
 
@@ -49,7 +50,10 @@ function handleSubmit(event) {
             :null
             }
 <br/>  <br/>
-<button onClick={event=>window.location.href='/favoritesCities'}>Go to favorite cities</ button>
+<NavLink to = "/favoritesCities" exact> {console.log('clik')}
+        <button>FavoritesCities</button>
+        </NavLink>
+{/* <button onClick={event=>window.location.href='/favoritesCities'}>Go to favorite cities</ button> */}
         </div>
     )}
   
