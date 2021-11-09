@@ -1,42 +1,33 @@
 import React,{useState, useEffect} from 'react';
-import data from './data/db.json';
+
 
 function FavoritesCities(){
+
 const [city, setCity] = useState("")
 const [favorites, setFavorites] = useState([])
-
-const addToFavorites = data => {
-  setFavorites(favorites => [...favorites, data]);
-}
 
 //**************************** */
 const handleOnChange = (event) =>{
   setCity(event.target.value)
 }
 
-const getData = () => {
-  fetch(`http://localhost:3000/favoritecities`,{
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    }
-  })
+
+
+useEffect(() => {
+  fetch(`http://localhost:3000/favoritecities`
+  )
   .then(response => response.json())
   .then(data => { 
   const filteredCities = data.map(city => city.title ? city.title : '');
   setFavorites(filteredCities);      
-   })
-}
-
-useEffect(() => {
-  getData();
-}, [])
+   }, [])
+})
 
 const handleSubmit= (event) => {
   event.preventDefault();
   
-if(city !==null || city !==''){
-  console.log('attempting...');
+  if(city !==null || city !==''){
+    console.log('attempting...');
   fetch(`http://localhost:3000/favoritecities`,{
     method: "POST",
     headers: {
@@ -47,9 +38,12 @@ if(city !==null || city !==''){
     })
   })
   .then(res => res.json())
-  .then(() => { 
-    console.log('success!!');
-    getData();
+  .then(data => { 
+  //  debugger
+  //  console.log(setFavorites(data))
+    console.log(data);
+    setFavorites([...favorites, data.title])
+    console.log(data.title)
    })
   }
 }
@@ -57,12 +51,10 @@ if(city !==null || city !==''){
 //******************************************************* */
   const showFavorites = () => {
     return (
-      <>
         <ul>
-          {favorites.map(favorite => favorite ? <li>{favorite}</li> : '')}
+          {favorites.map(favorite => <li key={favorite.id}>{favorite}</li>)}
         </ul>
-      </>
-    )
+      )
   }
   return(
     <div>

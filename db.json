@@ -9,72 +9,28 @@
       "title": "Houston"
     },
     {
-      "id": 3,
-      "title": "Los Angeles"
+      "title": "miami",
+      "id": 3
     },
     {
-      "id": 4,
-      "title": "burkina faso"
+      "title": "boston",
+      "id": 4
     },
     {
-      "title": "paris",
+      "title": "bun",
       "id": 5
     },
     {
-      "title": "paris",
+      "title": "bronx",
       "id": 6
     },
     {
-      "title": "paris",
+      "title": "boston",
       "id": 7
     },
     {
-      "title": "paris",
+      "title": "kenya",
       "id": 8
-    },
-    {
-      "title": "moscow",
-      "id": 9
-    },
-    {
-      "title": "moscow",
-      "id": 10
-    },
-    {
-      "title": "hawai",
-      "id": 11
-    },
-    {
-      "title": "berlin",
-      "id": 12
-    },
-    {
-      "title": "BBB",
-      "id": 13
-    },
-    {
-      "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
-      "id": 16
-    },
-    {
-      "id": 17
-    },
-    {
-      "title": "rome",
-      "id": 18
-    },
-    {
-      "title": "rome",
-      "id": 19
-    },
-    {
-      "title": "Bahamas",
-      "id": 20
     }
   ]
 }
