@@ -9,7 +9,7 @@ function Home(){
         </header>
         <span>Let's get started!</span> 
              <br/>  <br/> <br/>
-    <NavLink to = "/weather" exact> {console.log('clik')}
+    <NavLink to = "/weather" exact>
         <button>Weather</button>
     </NavLink>
       </div>

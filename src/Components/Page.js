@@ -1,6 +1,6 @@
 import React from 'react';
 
-//2nd client side 
+
 function Page(props){
     console.log("props",props)
     const {data}= props

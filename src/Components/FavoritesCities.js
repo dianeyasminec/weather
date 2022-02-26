@@ -3,22 +3,25 @@ import React,{useState, useEffect} from 'react';
 
 function FavoritesCities(){
 
-const [city, setCity] = useState("")
-const [favorites, setFavorites] = useState([])
-
+  const [city, setCity] = useState("")
+  const [favorites, setFavorites] = useState([""])
+  const[count,setCount] = useState(0)
 //**************************** */
+  function handleCounter(){
+  setCount( currentCount => currentCount + 1 );
+  }
 const handleOnChange = (event) =>{
   setCity(event.target.value)
 }
 
 
 
-useEffect(() => {
-  fetch(`http://localhost:3000/favoritecities`
+  useEffect(() => {
+   fetch(`http://localhost:3000/favoritecities`
   )
-  .then(response => response.json())
-  .then(data => { 
-  const filteredCities = data.map(city => city.title ? city.title : '');
+    .then(response => response.json())
+   .then(data => { 
+    const filteredCities = data.map(city => city.title ? city.title : '');
   setFavorites(filteredCities);      
    }, [])
 })
@@ -41,21 +44,19 @@ const handleSubmit= (event) => {
   .then(data => { 
   //  debugger
   //  console.log(setFavorites(data))
-    console.log(data);
+    
+   
     setFavorites([...favorites, data.title])
     console.log(data.title)
+    console.log(favorites);
    })
   }
 }
 
 //******************************************************* */
-  const showFavorites = () => {
-    return (
-        <ul>
-          {favorites.map(favorite => <li key={favorite.id}>{favorite}</li>)}
-        </ul>
-      )
-  }
+ 
+      const showFavorites = (favorites.map(favorite => <li key={favorite.id} >{favorite}</li>))
+  
   return(
     <div>
 <h1> Welcome to Favorites cities </h1>
@@ -65,7 +66,7 @@ const handleSubmit= (event) => {
 </form>
 <hr/>
 <h2> Here are my favorites: </h2>
-<span>{showFavorites()}</span>
+<button onClick={handleCounter}>{favorites}</button>
     </div>
   )}
 

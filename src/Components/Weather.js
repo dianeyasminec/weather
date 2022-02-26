@@ -45,7 +45,7 @@ return(
             :null
             }
         <br/>  <br/>
-    <NavLink to = "/favoritesCities" exact> {console.log('clik')}
+    <NavLink to = "/favoritesCities" exact> 
         <button>FavoritesCities</button>
     </NavLink>
 
